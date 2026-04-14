@@ -1,25 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import AddCandidateForm from './components/AddCandidateForm';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div className="App">
+              <header className="App-header">
+                <a className="App-link" href="/candidates/new">
+                  Add New Candidate
+                </a>
+                <a
+                  className="App-link"
+                  href="https://reactjs.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Learn React
+                </a>
+              </header>
+            </div>
+          }
+        />
+        <Route path="/candidates/new" element={<AddCandidateForm />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
