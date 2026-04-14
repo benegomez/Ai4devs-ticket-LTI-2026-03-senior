@@ -121,7 +121,7 @@ Still can not add the new candidate.
 
 ### Error persistente tras reinicio del servidor
 ```
-Seguimos igual, ¿podrías revisar bien?
+
 [screenshot adjunto]
 ```
 > Causa raíz encontrada: archivo `frontend/.env` tenía
